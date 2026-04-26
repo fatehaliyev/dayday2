@@ -1,0 +1,34 @@
+backend:
+  name: github
+  repo: fatehaliyev/dayday
+  branch: 2026-04-20-qn6c
+  base_url: https://www.haliyikamamerkezi.online
+  auth_endpoint: api/auth
+
+local_backend: true
+
+squash_merges: true
+commit_messages:
+  create: "content: create {{collection}} \"{{slug}}\""
+  update: "content: update {{collection}} \"{{slug}}\""
+  delete: "content: delete {{collection}} \"{{slug}}\""
+  uploadMedia: "media: upload \"{{path}}\""
+  deleteMedia: "media: delete \"{{path}}\""
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "blog"
+    label: "Bloq Yazıları"
+    folder: "public/content/blog"
+    extension: "json"
+    format: "json"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Başlıq", name: "title", widget: "string" }
+      - { label: "Tarix", name: "publish_date", widget: "datetime" }
+      - { label: "Şəkil", name: "featured_image", widget: "image" }
+      - { label: "SEO Açıqlaması", name: "seo_description", widget: "text" }
+      - { label: "Mətn", name: "body", widget: "markdown" }
