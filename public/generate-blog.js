@@ -1,11 +1,11 @@
 const fs = require('fs');
 
 const posts = [
-  { slug: 'blog-1-leke-nedir', title: 'Leke Nedir?', image: 'photo-11.jpg', body: ['Leke; yüzeye temas eden bir maddenin, malzemenin liflerine veya dokusuna tutunarak kalıcı iz bırakmasıdır. Halılarda lekenin kalıcılığı; maddenin türüne, bekleme süresine ve yanlış temizleme yöntemlerine göre artar.', 'İlk müdahalede sert ovalama yerine, emici bez ile tampon uygulamak gerekir. Sıcak su bazı lekeleri sabitleyebileceği için kontrollü kullanılmalıdır. Özellikle çay, kahve, yağ ve mürekkep lekelerinde profesyonel işlem daha güvenlidir.', 'Halikoltukyikama olarak leke türünü analiz ederek halı tipine uygun temizlik süreci uygular, halınızın dokusunu koruyarak hijyenik sonuç elde ederiz.'] },
+  { slug: 'blog-1-leke-nedir', title: 'Leke Nedir?', image: 'photo-11.jpg', body: ['Leke; yüzeye temas eden bir maddenin, malzemenin liflerine veya dokusuna tutunarak kalıcı iz bırakmasıdır. Halılarda lekenin kalıcılığı; maddenin türüne, bekleme süresine ve yanlış temizleme yöntemlerine göre artar.', 'İlk müdahalede sert ovalama yerine, emici bez ile tampon uygulamak gerekir. Sıcak su bazı lekeleri sabitleyebileceği için kontrollü kullanılmalıdır. Özellikle çay, kahve, yağ ve mürekkep lekelerinde profesyonel işlem daha güvenlidir.', 'Halı Koltuk Yıkama olarak leke türünü analiz ederek halı tipine uygun temizlik süreci uygular, halınızın dokusunu koruyarak hijyenik sonuç elde ederiz.'] },
   { slug: 'blog-2-yanlis-hali-yikama', title: 'Yanlış Halı Yıkama', image: 'photo-10.jpg', body: ['Halı yıkamada en sık yapılan hatalar; uygunsuz deterjan kullanımı, yüksek basınçla sert yıkama ve yeterli durulama yapmamaktır. Bu hatalar halının renginde solmaya, liflerde sertleşmeye ve kötü kokuya yol açar.', 'Evde bilinçsiz uygulamalar kısa vadede temiz görünüm verse de uzun vadede halı ömrünü azaltır. Özellikle el dokuma veya yün halılarda profesyonel süreç şarttır.', 'Doğru yöntem, halı türüne özel kimyasal ve kontrollü makine kullanımıdır.'] },
-  { slug: 'blog-3-teknikler', title: 'Halı Yıkama Teknikleri', image: 'photo-9.jpg', body: ['Profesyonel halı yıkamada ön kontrol, toz alma, leke ön işlemi, ana yıkama, durulama, kontrollü sıkma ve kurutma adımları uygulanır.', 'Makine halıları ile el dokuma halılar aynı teknikle temizlenmez. Lif yapısı, boya dayanımı ve dokuma sıklığı dikkate alınarak yöntem belirlenmelidir.', 'Halikoltukyikama halı tipine göre teknik seçimi yaparak hem temizlik hem de ürün güvenliği sağlar.'] },
+  { slug: 'blog-3-teknikler', title: 'Halı Yıkama Teknikleri', image: 'photo-9.jpg', body: ['Profesyonel halı yıkamada ön kontrol, toz alma, leke ön işlemi, ana yıkama, durulama, kontrollü sıkma ve kurutma adımları uygulanır.', 'Makine halıları ile el dokuma halılar aynı teknikle temizlenmez. Lif yapısı, boya dayanımı ve dokuma sıklığı dikkate alınarak yöntem belirlenmelidir.', 'Halı Koltuk Yıkama halı tipine göre teknik seçimi yaparak hem temizlik hem de ürün güvenliği sağlar.'] },
   { slug: 'blog-4-hali-yikamada-havuz-sistemi', title: 'Halı Yıkamada Havuz Sistemi', image: 'photo-8.jpg', body: ['Havuz sistemi, halıların toplu su içinde bekletilerek temizlenmesini ifade eder. Bu sistem doğru filtreleme ve su yönetimi olmadan uygulandığında hijyen riski oluşturabilir.', 'Aynı suyun uzun süre kullanılması kir transferine neden olabilir. Bu nedenle modern tesislerde kontrollü su akışı ve ayrı işlem adımları tercih edilir.', 'Kalite için süreçlerin ürün bazlı yürütülmesi önemlidir.'] },
-  { slug: 'blog-5-fason-hali-yikamacilar', title: 'Fason Halı Yıkamacılar', image: 'photo-7.jpg', body: ['Fason çalışma modelinde siparişi alan firma ile yıkamayı yapan tesis farklı olabilir. Bu durum kalite takibini zorlaştırır.', 'Müşteri açısından en güvenli yöntem, işi kendi tesisinde yürüten ve süreç şeffaflığı sunan firmalarla çalışmaktır.', 'Halikoltukyikama tüm süreçleri kontrol altında tutarak hizmet kalitesini standart hale getirir.'] },
+  { slug: 'blog-5-fason-hali-yikamacilar', title: 'Fason Halı Yıkamacılar', image: 'photo-7.jpg', body: ['Fason çalışma modelinde siparişi alan firma ile yıkamayı yapan tesis farklı olabilir. Bu durum kalite takibini zorlaştırır.', 'Müşteri açısından en güvenli yöntem, işi kendi tesisinde yürüten ve süreç şeffaflığı sunan firmalarla çalışmaktır.', 'Halı Koltuk Yıkama tüm süreçleri kontrol altında tutarak hizmet kalitesini standart hale getirir.'] },
   { slug: 'blog-6-detayli-hali-temizligi', title: 'Detaylı Halı Temizliği', image: 'photo-6.jpg', body: ['Detaylı temizlik, yalnızca yüzey kirini değil liflerin içine işleyen toz, bakteri ve kokuları da hedefler.', 'Ön toz alma, leke analizi ve çok aşamalı durulama hijyen kalitesini artırır.', 'Kurutma kontrolü yeterli yapılmadığında nem kaynaklı koku oluşabilir; bu yüzden profesyonel kurutma önemlidir.'] },
   { slug: 'blog-7-fiyatlar-nasil-belirleniyor', title: 'Fiyatlar Nasıl Belirleniyor?', image: 'photo-5.jpg', body: ['Fiyatlandırmada halının metrekaresi, türü, leke yoğunluğu ve ek hizmet ihtiyacı belirleyici olur.', 'El dokuma gibi hassas ürünlerde daha kontrollü işlem gerektiği için maliyet farklılaşabilir.', 'Şeffaf fiyat politikası için hizmet öncesi net bilgilendirme önemlidir.'] },
   { slug: 'blog-8-kuyu-suyu-ile-hali-yikama', title: 'Kuyu Suyu ile Halı Yıkama', image: 'photo-4.jpg', body: ['Kuyu suyu, mineral yoğunluğu ve sertlik derecesi nedeniyle bazı halılarda renk matlaşmasına veya lif sertleşmesine neden olabilir.', 'Suyun analiz edilmeden kullanılması profesyonel standartlarla uyumlu değildir.', 'Temizlik kalitesinde suyun kimyasal dengesi büyük rol oynar.'] },
@@ -19,15 +19,15 @@ const createPostHtml = (post) => `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="${post.title} - Halikoltukyikama blog yazısı.">
-  <title>${post.title} | Halikoltukyikama Blog</title>
+  <meta name="description" content="${post.title} - Halı Koltuk Yıkama blog yazısı.">
+  <title>${post.title} | Halı Koltuk Yıkama Blog</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <header>
     <div class="container">
-      <a href="index.html" class="logo">Halikoltukyikama<span>.</span></a>
+      <a href="index.html" class="logo">Halı Koltuk Yıkama<span>.</span></a>
       <nav class="nav-links">
         <a href="index.html">Ana Sayfa</a><a href="hakkimizda.html">Hakkımızda</a><a href="hizmetler.html">Hizmetlerimiz</a><a href="hizmet-bolgeleri.html">Hizmet Bölgeleri</a><a href="blog.html" class="active">Blog</a><a href="iletisim.html">İletişim</a>
       </nav>
@@ -44,7 +44,7 @@ const createPostHtml = (post) => `<!DOCTYPE html>
   <footer>
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-about"><a href="index.html" class="footer-logo">Halikoltukyikama<span>.</span></a></div>
+        <div class="footer-about"><a href="index.html" class="footer-logo">Halı Koltuk Yıkama<span>.</span></a></div>
         <div class="footer-links"><h4 class="footer-heading">Hızlı Menü</h4><ul><li><a href="blog.html">Blog</a></li><li><a href="iletisim.html">İletişim</a></li></ul></div>
         <div class="footer-contact"><h4 class="footer-heading">İletişim</h4><ul><li><i class="fas fa-phone-alt"></i><a href="tel:+905368499790">0536 849 97 90</a></li><li><i class="fab fa-whatsapp"></i><a href="https://wa.me/905368499790" target="_blank">0536 849 97 90</a></li></ul></div>
       </div>
