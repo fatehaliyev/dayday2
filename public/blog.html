@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog ve Makaleler | Halı Koltuk Yıkama</title>
-  <meta name="description" content="Ev temizliği, halı ve koltuk bakımı hakkında faydalı bilgiler, ipuçları ve güncel makaleler.">
+  <meta name="description"
+    content="Ev temizliği, halı ve koltuk bakımı hakkında faydalı bilgiler, ipuçları ve güncel makaleler.">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
 
   <!-- Classic Premium Header -->
   <header id="main-header">
-    
+
     <div class="header-main">
       <div class="container">
         <a href="index.html" class="logo">
@@ -52,7 +55,7 @@
             </div>
           </div>
           <div class="blog-card">
-            <div class="blog-img"><img src="assets/images/hero-carpet-clean.png" alt="Yanlış Halı Yıkama"></div>
+            <div class="blog-img"><img src="assets/images/photo-10.jpg" alt="Yanlış Halı Yıkama"></div>
             <div class="blog-content">
               <span class="blog-date">24 NİSAN 2026</span>
               <h3>Yanlış Halı Yıkama Teknikleri</h3>
@@ -61,7 +64,7 @@
             </div>
           </div>
           <div class="blog-card">
-            <div class="blog-img"><img src="assets/images/service-hali.png" alt="Teknikler"></div>
+            <div class="blog-img"><img src="assets/images/photo-9.jpg" alt="Teknikler"></div>
             <div class="blog-content">
               <span class="blog-date">22 NİSAN 2026</span>
               <h3>Profesyonel Halı Yıkama Teknikleri</h3>
@@ -70,7 +73,7 @@
             </div>
           </div>
           <div class="blog-card">
-            <div class="blog-img"><img src="assets/images/service-hali.png" alt="Havuz Sistemi"></div>
+            <div class="blog-img"><img src="assets/images/photo-8.jpg" alt="Havuz Sistemi"></div>
             <div class="blog-content">
               <span class="blog-date">20 NİSAN 2026</span>
               <h3>Halı Yıkamada Havuz Sistemi Nedir?</h3>
@@ -79,7 +82,7 @@
             </div>
           </div>
           <div class="blog-card">
-            <div class="blog-img"><img src="assets/images/service-hali.png" alt="Fason Yıkama"></div>
+            <div class="blog-img"><img src="assets/images/photo-5.jpg" alt="Fason Yıkama"></div>
             <div class="blog-content">
               <span class="blog-date">18 NİSAN 2026</span>
               <h3>Fason Halı Yıkamacılar ve Riskleri</h3>
@@ -88,7 +91,7 @@
             </div>
           </div>
           <div class="blog-card">
-            <div class="blog-img"><img src="assets/images/service-hali.png" alt="Detaylı Temizlik"></div>
+            <div class="blog-img"><img src="assets/images/hero-carpet-clean.png" alt="Detaylı Temizlik"></div>
             <div class="blog-content">
               <span class="blog-date">16 NİSAN 2026</span>
               <h3>Detaylı Halı Temizliği Nasıl Yapılır?</h3>
@@ -103,7 +106,8 @@
 
   <!-- Floating Contact Buttons -->
   <div class="fab-container">
-    <a href="https://wa.me/905368499790" class="fab-btn fab-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://wa.me/905368499790" class="fab-btn fab-whatsapp" target="_blank"><i
+        class="fab fa-whatsapp"></i></a>
     <a href="tel:+905368499790" class="fab-btn fab-phone"><i class="fas fa-phone-alt"></i></a>
   </div>
 
@@ -113,7 +117,8 @@
       <div class="footer-grid">
         <div class="footer-about">
           <div class="logo"><i class="fas fa-leaf"></i> HalıKoltuk Yıkama</div>
-          <p>İstanbul'un lider temizlik firması olarak halı, koltuk, stor perde ve yatak yıkama hizmetlerinde kaliteyi evinize getiriyoruz.</p>
+          <p>İstanbul'un lider temizlik firması olarak halı, koltuk, stor perde ve yatak yıkama hizmetlerinde kaliteyi
+            evinize getiriyoruz.</p>
         </div>
         <div>
           <h4 class="footer-title">Hızlı Menü</h4>
@@ -153,8 +158,8 @@
     // Scroll Animation (Reveal)
     const revealElements = document.querySelectorAll('.feature-box, .about-content, .about-img, .service-card, .district-item, .blog-card, .section-title');
     revealElements.forEach(el => el.classList.add('reveal'));
-    
-    const revealCallback = function(entries, observer) {
+
+    const revealCallback = function (entries, observer) {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('active');
@@ -165,7 +170,7 @@
     revealElements.forEach(el => revealObserver.observe(el));
 
     // Sticky Header
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
       const header = document.getElementById('main-header');
       if (window.scrollY > 50) {
         header.style.boxShadow = '0 4px 10px rgba(0,0,0,0.1)';
@@ -175,4 +180,5 @@
     });
   </script>
 </body>
+
 </html>
