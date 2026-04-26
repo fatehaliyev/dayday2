@@ -10,24 +10,9 @@
 </head>
 <body>
 
-  <!-- Page Loader -->
-  <div id="loader">
-    <div class="spinner"></div>
-  </div>
-
   <!-- Classic Premium Header -->
   <header id="main-header">
-    <div class="header-top">
-      <div class="container">
-        <div class="header-top-info">
-          <span><i class="fas fa-map-marker-alt"></i> İstanbul, Türkiye</span>
-          <span><i class="fas fa-envelope"></i> info@halikoltukyikama.com</span>
-        </div>
-        <div>
-          <span>Çalışma Saatleri: 08:00 - 20:00</span>
-        </div>
-      </div>
-    </div>
+    
     <div class="header-main">
       <div class="container">
         <a href="index.html" class="logo">
@@ -139,13 +124,19 @@
 
   <script src="js/blog-fetcher.js"></script>
   <script>
-    // Page Loader
-    window.addEventListener('load', function() {
-      const loader = document.getElementById('loader');
-      setTimeout(() => {
-        loader.classList.add('fade-out');
-      }, 500);
-    });
+    // Scroll Animation (Reveal)
+    const revealElements = document.querySelectorAll('.feature-box, .about-content, .about-img, .service-card, .district-item, .blog-card, .section-title');
+    revealElements.forEach(el => el.classList.add('reveal'));
+    
+    const revealCallback = function(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    };
+    const revealObserver = new IntersectionObserver(revealCallback, { threshold: 0.15 });
+    revealElements.forEach(el => revealObserver.observe(el));
 
     // Sticky Header
     window.addEventListener('scroll', function() {

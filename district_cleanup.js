@@ -4,17 +4,23 @@ const dir = 'c:\\Users\\fateh\\OneDrive\\Desktop\\Halikoltukyikama\\public';
 
 const indexHtml = fs.readFileSync(path.join(dir, 'index.html'), 'utf8');
 
-const loaderRegex = /<!-- Page Loader -->[\s\S]*?<\/div>\s*<\/div>/;
+
 const headerRegex = /<!-- Classic Premium Header -->[\s\S]*?<\/header>/;
 const footerRegex = /<!-- Classic Footer -->[\s\S]*?<\/footer>/;
-const fabRegex = /<!-- Floating Contact Buttons -->[\s\S]*?<\/div>\s*<\/div>/;
 const scriptRegex = /<script>[\s\S]*?<\/script>\s*<\/body>/;
 
-const newLoader = indexHtml.match(loaderRegex)[0];
+
 const newHeader = indexHtml.match(headerRegex)[0];
 const newFooter = indexHtml.match(footerRegex)[0];
-const newFab = indexHtml.match(fabRegex)[0];
 const newScript = indexHtml.match(scriptRegex)[0];
+
+const newFab = `
+  <!-- Floating Contact Buttons -->
+  <div class="fab-container">
+    <a href="https://wa.me/905368499790" class="fab-btn fab-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="tel:+905368499790" class="fab-btn fab-phone"><i class="fas fa-phone-alt"></i></a>
+  </div>
+`;
 
 function toTitleCase(str) {
   return str.replace(
@@ -28,16 +34,9 @@ function toTitleCase(str) {
 function processFile(filePath) {
   let content = fs.readFileSync(filePath, 'utf8');
   
-  // Extract district name from filename, e.g., "avcilar-hali-yikama.html" -> "Avcılar"
   const baseName = path.basename(filePath, '.html');
   const districtNameRaw = baseName.replace('-hali-yikama', '').replace(/-/g, ' ');
   
-  // Turkish char map for capitalization
-  const trMap = {
-    'c': 'ç', 's': 'ş', 'g': 'ğ', 'u': 'ü', 'o': 'ö', 'i': 'ı'
-  };
-  
-  // Basic fix for district names
   let districtName = toTitleCase(districtNameRaw);
   if(districtName.toLowerCase() === 'avcilar') districtName = 'Avcılar';
   if(districtName.toLowerCase() === 'bagcilar') districtName = 'Bağcılar';
@@ -62,7 +61,7 @@ function processFile(filePath) {
   const newBodyContent = `
 <body>
 
-  ${newLoader}
+
 
   ${newHeader}
 
@@ -90,7 +89,7 @@ function processFile(filePath) {
           </ul>
         </div>
         <div class="about-img" style="flex: 1;">
-          <img src="assets/images/photo-2.jpg" alt="${districtName} Halı Yıkama" style="border-radius: var(--radius); box-shadow: var(--shadow-md);">
+          <img src="assets/images/photo-1.jpg" alt="${districtName} Halı Yıkama" style="border-radius: var(--radius); box-shadow: var(--shadow-md);">
         </div>
       </div>
     </section>
@@ -104,17 +103,14 @@ function processFile(filePath) {
         </div>
         <div class="services-grid">
           <div class="service-card">
-            <div class="service-icon"><i class="fas fa-rug"></i></div>
             <h3>Halı Yıkama</h3>
             <p>Halılarınız türüne göre ayrıştırılarak tam otomatik makinelerde yıkanır.</p>
           </div>
           <div class="service-card">
-            <div class="service-icon"><i class="fas fa-couch"></i></div>
             <h3>Koltuk Yıkama</h3>
             <p>Evinizde yüksek vakumlu makinelerle derinlemesine koltuk temizliği.</p>
           </div>
           <div class="service-card">
-            <div class="service-icon"><i class="fas fa-bed"></i></div>
             <h3>Yatak Yıkama</h3>
             <p>Yataklarınızdaki toz akarları ve lekeler profesyonel yöntemlerle yok edilir.</p>
           </div>
@@ -123,7 +119,7 @@ function processFile(filePath) {
     </section>
   </main>
 
-  ${newFab}
+${newFab}
 
   ${newFooter}
 
@@ -133,13 +129,11 @@ function processFile(filePath) {
   // Replace everything between <body> and </body>
   const newHtml = content.replace(/<body>[\s\S]*<\/body>/, newBodyContent);
   
-  // Update Meta Title and Description if they look weird
   let finalHtml = newHtml;
   finalHtml = finalHtml.replace(/<title>.*?<\/title>/, `<title>${districtName} Halı Yıkama | Halı Koltuk Yıkama</title>`);
   finalHtml = finalHtml.replace(/<meta name="description" content=".*?">/, `<meta name="description" content="${districtName} halı yıkama hizmetleri. ${districtName} bölgesinde profesyonel halı, koltuk, yatak ve perde temizliği.">`);
 
   fs.writeFileSync(filePath, finalHtml, 'utf8');
-  console.log('District layout standardized for', filePath);
 }
 
 function walkDir(currentPath) {
@@ -148,6 +142,7 @@ function walkDir(currentPath) {
     const fullPath = path.join(currentPath, file);
     if (!fs.statSync(fullPath).isDirectory() && file.endsWith('-hali-yikama.html')) {
       processFile(fullPath);
+      console.log('Fixed:', file);
     }
   }
 }

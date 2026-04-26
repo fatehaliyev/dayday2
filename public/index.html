@@ -10,24 +10,10 @@
 </head>
 <body>
 
-  <!-- Page Loader -->
-  <div id="loader">
-    <div class="spinner"></div>
-  </div>
+
 
   <!-- Classic Premium Header -->
   <header id="main-header">
-    <div class="header-top">
-      <div class="container">
-        <div class="header-top-info">
-          <span><i class="fas fa-map-marker-alt"></i> İstanbul, Türkiye</span>
-          <span><i class="fas fa-envelope"></i> info@halikoltukyikama.com</span>
-        </div>
-        <div>
-          <span>Çalışma Saatleri: 08:00 - 20:00</span>
-        </div>
-      </div>
-    </div>
     <div class="header-main">
       <div class="container">
         <a href="index.html" class="logo">
@@ -49,9 +35,9 @@
     <!-- Hero Section -->
     <section class="hero">
       <div class="container">
-        <h1>Profesyonel Halı ve Koltuk Yıkama</h1>
-        <p>İstanbul'un tüm ilçelerine ücretsiz servis imkanı ile halılarınızı evinizden alıp, hijyenik bir şekilde temizleyerek teslim ediyoruz.</p>
-        <div class="hero-btns">
+        <h1 class="hero-anim" style="animation-delay: 0.2s;">Profesyonel Halı ve Koltuk Yıkama</h1>
+        <p class="hero-anim" style="animation-delay: 0.4s;">İstanbul'un tüm ilçelerine ücretsiz servis imkanı ile halılarınızı evinizden alıp, hijyenik bir şekilde temizleyerek teslim ediyoruz.</p>
+        <div class="hero-btns hero-anim" style="animation-delay: 0.6s;">
           <a href="tel:+905368499790" class="btn-primary">Bizi Arayın</a>
           <a href="hizmetler.html" class="btn-outline-white">Hizmetlerimizi İnceleyin</a>
         </div>
@@ -84,7 +70,7 @@
     <section class="about">
       <div class="container about-wrapper">
         <div class="about-img">
-          <img src="assets/images/photo-2.jpg" alt="Hakkımızda">
+          <img src="assets/images/photo-1.jpg" alt="Hakkımızda">
         </div>
         <div class="about-content">
           <div class="section-title" style="text-align: left; margin-bottom: 20px;">
@@ -250,13 +236,19 @@
   </footer>
 
   <script>
-    // Page Loader
-    window.addEventListener('load', function() {
-      const loader = document.getElementById('loader');
-      setTimeout(() => {
-        loader.classList.add('fade-out');
-      }, 500);
-    });
+    // Scroll Animation (Reveal)
+    const revealElements = document.querySelectorAll('.feature-box, .about-content, .about-img, .service-card, .district-item, .blog-card, .section-title');
+    revealElements.forEach(el => el.classList.add('reveal'));
+    
+    const revealCallback = function(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    };
+    const revealObserver = new IntersectionObserver(revealCallback, { threshold: 0.15 });
+    revealElements.forEach(el => revealObserver.observe(el));
 
     // Sticky Header
     window.addEventListener('scroll', function() {
