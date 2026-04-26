@@ -9,14 +9,42 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <a href="index.html" class="logo">Halı Koltuk Yıkama<span>.</span></a>
-      <nav class="nav-links">
-        <a href="index.html">Ana Sayfa</a><a href="hakkimizda.html">Hakkımızda</a><a href="hizmetler.html">Hizmetlerimiz</a><a href="hizmet-bolgeleri.html">Hizmet Bölgeleri</a><a href="blog.html" class="active">Blog</a><a href="iletisim.html">İletişim</a>
+  <!-- Completely New Header -->
+  <header style="background: var(--bg-color); border-bottom: 1px solid #e2e8f0; padding: 0;">
+    <!-- Top Bar -->
+    <div style="background-color: var(--primary-color); padding: 10px 0; color: var(--white); font-size: 13px;">
+      <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+        <div style="display: flex; gap: 20px;">
+          <span style="display: flex; align-items: center;"><i class="fas fa-envelope" style="margin-right: 8px; color: var(--accent-color);"></i> info@halikoltukyikama.com.tr</span>
+          <span style="display: flex; align-items: center;"><i class="fas fa-clock" style="margin-right: 8px; color: var(--accent-color);"></i> Pzt - Cmt: 08:00 - 20:00</span>
+        </div>
+        <div>
+          <a href="https://wa.me/905368499790" style="color: var(--white); font-weight: 600; display: flex; align-items: center;"><i class="fab fa-whatsapp" style="margin-right: 8px; font-size: 16px;"></i> +90 536 849 97 90</a>
+        </div>
+      </div>
+    </div>
+    <!-- Main Bar -->
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 20px 30px;">
+      <a href="index.html" class="logo" style="font-size: 24px; letter-spacing: -1px; text-transform: none; display: flex; align-items: center; gap: 10px;">
+        <div style="width: 40px; height: 40px; background: var(--accent-color); color: var(--white); display: flex; align-items: center; justify-content: center; border-radius: 8px;"><i class="fas fa-leaf"></i></div>
+        HalıKoltuk<span style="font-weight: 300;">Yıkama</span>
+      </a>
+      
+      <nav class="nav-links" style="display: flex; gap: 35px;">
+        <a href="index.html" class="active" style="font-weight: 500; text-transform: capitalize; font-size: 15px;">Ana Sayfa</a>
+        <a href="hakkimizda.html" style="font-weight: 500; text-transform: capitalize; font-size: 15px;">Kurumsal</a>
+        <a href="hizmetler.html" style="font-weight: 500; text-transform: capitalize; font-size: 15px;">Hizmetler</a>
+        <a href="blog.html" style="font-weight: 500; text-transform: capitalize; font-size: 15px;">Makaleler</a>
+        <a href="iletisim.html" style="font-weight: 500; text-transform: capitalize; font-size: 15px;">İletişim</a>
       </nav>
-      <div class="header-cta"><a href="tel:+905368499790" class="phone"><i class="fas fa-phone-alt"></i> 0536 849 97 90</a></div>
-      <button class="mobile-menu-btn" aria-label="Menu"><i class="fas fa-bars"></i></button>
+      
+      <div class="header-cta">
+        <a href="tel:+905368499790" class="btn btn-primary" style="padding: 10px 24px; font-size: 14px; border-radius: 4px;">Hemen Ara</a>
+      </div>
+      
+      <button class="mobile-menu-btn" aria-label="Menu" style="font-size: 28px; color: var(--primary-color); border: none; background: transparent; cursor: pointer;">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
   </header>
   <section class="page-header"><div class="container"><h1>Fiyatlar Nasıl Belirleniyor?</h1><div class="breadcrumb"><a href="blog.html">Blog</a> / <span>Fiyatlar Nasıl Belirleniyor?</span></div></div></section>
@@ -27,12 +55,54 @@
     <p>Şeffaf fiyat politikası için hizmet öncesi net bilgilendirme önemlidir.</p>
   </div></section>
   <section class="cta-banner"><div class="container"><a href="https://wa.me/905368499790" class="btn btn-whatsapp" target="_blank">WhatsApp ile Sorun</a></div></section>
-  <footer>
+  <!-- New 4-Column Footer -->
+  <footer style="background-color: var(--surface-color); padding-top: 80px; border-top: 1px solid #e2e8f0;">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-about"><a href="index.html" class="footer-logo">Halı Koltuk Yıkama<span>.</span></a></div>
-        <div class="footer-links"><h4 class="footer-heading">Hızlı Menü</h4><ul><li><a href="blog.html">Blog</a></li><li><a href="iletisim.html">İletişim</a></li></ul></div>
-        <div class="footer-contact"><h4 class="footer-heading">İletişim</h4><ul><li><i class="fas fa-phone-alt"></i><a href="tel:+905368499790">0536 849 97 90</a></li><li><i class="fab fa-whatsapp"></i><a href="https://wa.me/905368499790" target="_blank">0536 849 97 90</a></li></ul></div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 60px;">
+        <div class="footer-about" style="grid-column: span 2;">
+          <a href="index.html" style="font-size: 24px; font-family: var(--font-heading); font-weight: 800; color: var(--primary-color); display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+            <div style="width: 35px; height: 35px; background: var(--accent-color); color: var(--white); display: flex; align-items: center; justify-content: center; border-radius: 6px;"><i class="fas fa-leaf"></i></div>
+            HalıKoltuk<span style="font-weight: 300;">Yıkama</span>
+          </a>
+          <p style="color: var(--text-light); font-size: 15px; max-width: 400px;">Yılların tecrübesiyle halı, koltuk, yatak ve perdelerinizi ilk günkü temizliğine kavuşturuyoruz. Müşteri memnuniyeti bizim için her şeyden önce gelir.</p>
+        </div>
+        
+        <div>
+          <h4 style="font-family: var(--font-body); font-size: 16px; font-weight: 700; color: var(--primary-color); margin-bottom: 25px;">Sayfalar</h4>
+          <ul style="display: flex; flex-direction: column; gap: 10px;">
+            <li><a href="hakkimizda.html" style="color: var(--text-light); font-size: 15px;">Kurumsal</a></li>
+            <li><a href="hizmetler.html" style="color: var(--text-light); font-size: 15px;">Hizmetlerimiz</a></li>
+            <li><a href="blog.html" style="color: var(--text-light); font-size: 15px;">Blog / Makaleler</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-family: var(--font-body); font-size: 16px; font-weight: 700; color: var(--primary-color); margin-bottom: 25px;">Hizmetler</h4>
+          <ul style="display: flex; flex-direction: column; gap: 10px;">
+            <li><a href="hizmetler.html" style="color: var(--text-light); font-size: 15px;">Halı Yıkama</a></li>
+            <li><a href="hizmetler.html" style="color: var(--text-light); font-size: 15px;">Koltuk Yıkama</a></li>
+            <li><a href="hizmetler.html" style="color: var(--text-light); font-size: 15px;">Stor Perde Yıkama</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 style="font-family: var(--font-body); font-size: 16px; font-weight: 700; color: var(--primary-color); margin-bottom: 25px;">İletişim</h4>
+          <ul style="display: flex; flex-direction: column; gap: 15px;">
+            <li style="display: flex; gap: 10px; align-items: flex-start; color: var(--text-light); font-size: 15px;">
+              <i class="fas fa-map-marker-alt" style="color: var(--accent-color); margin-top: 5px;"></i> İstanbul, Türkiye
+            </li>
+            <li style="display: flex; gap: 10px; align-items: center; color: var(--text-light); font-size: 15px;">
+              <i class="fas fa-phone-alt" style="color: var(--accent-color);"></i> <a href="tel:+905368499790">+90 536 849 97 90</a>
+            </li>
+            <li style="display: flex; gap: 10px; align-items: center; color: var(--text-light); font-size: 15px;">
+              <i class="fab fa-whatsapp" style="color: var(--accent-color);"></i> <a href="https://wa.me/905368499790" target="_blank">+90 536 849 97 90</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div style="text-align: center; padding: 25px 0; border-top: 1px solid #e2e8f0; color: var(--text-light); font-size: 14px;">
+        <p>&copy; 2026 Halı Koltuk Yıkama. Tüm Hakları Saklıdır.</p>
       </div>
     </div>
   </footer>
