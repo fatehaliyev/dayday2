@@ -7,173 +7,197 @@
   <meta name="description" content="Halı Koltuk Yıkama iletişim bilgileri. Bize telefon, WhatsApp veya iletişim formu üzerinden ulaşabilirsiniz.">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    .contact { padding: 80px 0; }
+    .contact-wrapper { display: grid; grid-template-columns: 1fr 1.5fr; gap: 50px; }
+    .contact-info { background: var(--bg-light); padding: 40px; border-radius: var(--radius); border: 1px solid var(--border-color); }
+    .contact-info h3 { margin-bottom: 30px; font-size: 24px; color: var(--primary); }
+    .info-item { display: flex; gap: 20px; margin-bottom: 30px; }
+    .info-icon { width: 50px; height: 50px; background: white; color: var(--secondary); display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 20px; box-shadow: var(--shadow-sm); }
+    .info-text h4 { font-size: 14px; color: var(--text-gray); text-transform: uppercase; margin-bottom: 5px; }
+    .info-text a, .info-text p { font-size: 18px; font-weight: 600; color: var(--text-dark); }
+    
+    .contact-form { background: white; padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow-md); border: 1px solid var(--border-color); }
+    .contact-form h3 { margin-bottom: 30px; font-size: 24px; color: var(--primary); }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 8px; color: var(--text-gray); }
+    .form-control { width: 100%; padding: 12px 15px; border: 1px solid var(--border-color); border-radius: var(--radius); font-family: inherit; font-size: 15px; transition: var(--transition); }
+    .form-control:focus { outline: none; border-color: var(--secondary); box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1); }
+    @media (max-width: 768px) { .contact-wrapper { grid-template-columns: 1fr; } .form-grid { grid-template-columns: 1fr; } }
+  </style>
 </head>
 <body>
 
-  <!-- Slim Modern Header -->
-  <header>
-    <div class="container">
-      <a href="index.html" class="logo">
-        <div class="logo-icon"><i class="fas fa-leaf"></i></div>
-        <span>HalıKoltuk <span style="font-weight:300">Yıkama</span></span>
-      </a>
-      
-      <nav class="nav-links">
-        <a href="index.html">Ana Sayfa</a>
-        <a href="hakkimizda.html">Kurumsal</a>
-        <a href="hizmetler.html">Hizmetler</a>
-        <a href="blog.html">Makaleler</a>
-        <a href="iletisim.html">İletişim</a>
-      </nav>
-      
-      <div class="header-cta">
-        <a href="tel:+905368499790" class="btn btn-primary">Hemen Ara</a>
+  <!-- Page Loader -->
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Classic Premium Header -->
+  <header id="main-header">
+    <div class="header-top">
+      <div class="container">
+        <div class="header-top-info">
+          <span><i class="fas fa-map-marker-alt"></i> İstanbul, Türkiye</span>
+          <span><i class="fas fa-envelope"></i> info@halikoltukyikama.com</span>
+        </div>
+        <div>
+          <span>Çalışma Saatleri: 08:00 - 20:00</span>
+        </div>
       </div>
-      
-      <button class="mobile-menu-btn" aria-label="Menu" style="display:none">
-        <i class="fas fa-bars"></i>
-      </button>
+    </div>
+    <div class="header-main">
+      <div class="container">
+        <a href="index.html" class="logo">
+          <i class="fas fa-leaf"></i> HalıKoltuk Yıkama
+        </a>
+        <nav class="nav-links">
+          <a href="index.html">Ana Sayfa</a>
+          <a href="hakkimizda.html">Kurumsal</a>
+          <a href="hizmetler.html">Hizmetlerimiz</a>
+          <a href="blog.html">Blog</a>
+          <a href="iletisim.html" style="color: var(--secondary);">İletişim</a>
+        </nav>
+        <a href="tel:+905368499790" class="header-btn">Hemen Ara</a>
+      </div>
     </div>
   </header>
 
   <main>
-    <section class="hero" style="padding: 180px 0 80px; text-align: center; background: var(--accent-light);">
+    <div class="page-header">
       <div class="container">
-        <div class="section-header" style="text-align: center; margin: 0 auto;">
-          <span>BİZE ULAŞIN</span>
-          <h2>Size Nasıl <br>Yardımcı Olabiliriz?</h2>
-          <p style="margin: 20px auto 0;">Profesyonel temizlik hizmetlerimiz için teklif alabilir veya randevunuzu hemen oluşturabilirsiniz.</p>
-        </div>
+        <h1>İletişim</h1>
+        <p>Bize Ulaşın, Hizmetlerimizden Yararlanın</p>
       </div>
-    </section>
+    </div>
 
-    <section>
-      <div class="container">
-        <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px;">
+    <section class="contact">
+      <div class="container contact-wrapper">
+        <div class="contact-info">
+          <h3>İletişim Bilgileri</h3>
           
-          <!-- Contact Details -->
-          <div class="contact-details">
-            <h3 style="margin-bottom: 40px; font-size: 28px;">İletişim Bilgileri</h3>
-            
-            <div style="display: flex; flex-direction: column; gap: 30px;">
-              <div style="display: flex; gap: 20px; align-items: center;">
-                <div style="width: 60px; height: 60px; background: var(--white); box-shadow: var(--shadow-md); border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 20px; color: var(--accent);">
-                  <i class="fas fa-phone-alt"></i>
-                </div>
-                <div>
-                  <h4 style="font-size: 14px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px;">Telefon</h4>
-                  <a href="tel:+905368499790" style="font-size: 18px; font-weight: 700; color: var(--primary); text-decoration: none;">+90 536 849 97 90</a>
-                </div>
-              </div>
-
-              <div style="display: flex; gap: 20px; align-items: center;">
-                <div style="width: 60px; height: 60px; background: var(--white); box-shadow: var(--shadow-md); border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #22c55e;">
-                  <i class="fab fa-whatsapp"></i>
-                </div>
-                <div>
-                  <h4 style="font-size: 14px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px;">WhatsApp</h4>
-                  <a href="https://wa.me/905368499790" target="_blank" style="font-size: 18px; font-weight: 700; color: var(--primary); text-decoration: none;">+90 536 849 97 90</a>
-                </div>
-              </div>
-
-              <div style="display: flex; gap: 20px; align-items: center;">
-                <div style="width: 60px; height: 60px; background: var(--white); box-shadow: var(--shadow-md); border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 20px; color: var(--accent);">
-                  <i class="fas fa-map-marker-alt"></i>
-                </div>
-                <div>
-                  <h4 style="font-size: 14px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px;">Adres</h4>
-                  <p style="margin: 0; font-size: 16px; font-weight: 600; color: var(--primary);">İstanbul, Türkiye</p>
-                </div>
-              </div>
+          <div class="info-item">
+            <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+            <div class="info-text">
+              <h4>Telefon</h4>
+              <a href="tel:+905368499790">+90 536 849 97 90</a>
             </div>
           </div>
-
-          <!-- Contact Form - Elite Design -->
-          <div style="background: var(--white); padding: 50px; border-radius: var(--radius-lg); box-shadow: var(--shadow-premium);">
-            <h3 style="margin-bottom: 30px;">Hızlı Teklif Formu</h3>
-            <form action="#" style="display: grid; gap: 20px;">
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                <div style="display: flex; flex-direction: column; gap: 8px;">
-                  <label style="font-weight: 700; font-size: 13px; color: var(--text-muted);">Adınız Soyadınız</label>
-                  <input type="text" placeholder="Örn: Ahmet Yılmaz" style="padding: 14px 20px; border: 1px solid #e2e8f0; border-radius: 12px; font-family: inherit; font-size: 15px;">
-                </div>
-                <div style="display: flex; flex-direction: column; gap: 8px;">
-                  <label style="font-weight: 700; font-size: 13px; color: var(--text-muted);">Telefon Numaranız</label>
-                  <input type="tel" placeholder="05XX XXX XX XX" style="padding: 14px 20px; border: 1px solid #e2e8f0; border-radius: 12px; font-family: inherit; font-size: 15px;">
-                </div>
-              </div>
-              <div style="display: flex; flex-direction: column; gap: 8px;">
-                <label style="font-weight: 700; font-size: 13px; color: var(--text-muted);">Hizmet Türü</label>
-                <select style="padding: 14px 20px; border: 1px solid #e2e8f0; border-radius: 12px; font-family: inherit; font-size: 15px; background: white;">
-                  <option>Halı Yıkama</option>
-                  <option>Koltuk Yıkama</option>
-                  <option>Yatak Yıkama</option>
-                  <option>Diğer</option>
-                </select>
-              </div>
-              <div style="display: flex; flex-direction: column; gap: 8px;">
-                <label style="font-weight: 700; font-size: 13px; color: var(--text-muted);">Mesajınız</label>
-                <textarea rows="4" placeholder="Hizmet detaylarını buraya yazabilirsiniz..." style="padding: 14px 20px; border: 1px solid #e2e8f0; border-radius: 12px; font-family: inherit; font-size: 15px; resize: none;"></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary" style="justify-content: center; padding: 16px;">WhatsApp Üzerinden Gönder</button>
-            </form>
+          
+          <div class="info-item">
+            <div class="info-icon" style="color: #25D366;"><i class="fab fa-whatsapp"></i></div>
+            <div class="info-text">
+              <h4>WhatsApp</h4>
+              <a href="https://wa.me/905368499790" target="_blank">+90 536 849 97 90</a>
+            </div>
           </div>
+          
+          <div class="info-item">
+            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="info-text">
+              <h4>Adres</h4>
+              <p>İstanbul, Türkiye</p>
+            </div>
+          </div>
+        </div>
 
+        <div class="contact-form">
+          <h3>Hızlı Teklif Formu</h3>
+          <form action="#">
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Adınız Soyadınız</label>
+                <input type="text" class="form-control" placeholder="Örn: Ahmet Yılmaz">
+              </div>
+              <div class="form-group">
+                <label>Telefon Numaranız</label>
+                <input type="tel" class="form-control" placeholder="05XX XXX XX XX">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Hizmet Türü</label>
+              <select class="form-control">
+                <option>Halı Yıkama</option>
+                <option>Koltuk Yıkama</option>
+                <option>Yatak Yıkama</option>
+                <option>Stor Perde Yıkama</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Mesajınız</label>
+              <textarea class="form-control" rows="4" placeholder="Eklemek istediklerinizi yazın..."></textarea>
+            </div>
+            <button type="button" class="btn-primary" style="width: 100%; text-align: center; border: none; cursor: pointer; padding: 16px;">Gönder</button>
+          </form>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Floating Contact Buttons -->
   <div class="fab-container">
-    <a href="tel:+905368499790" class="fab-btn fab-phone" aria-label="Hemen Ara"><i class="fas fa-phone-alt"></i></a>
-    <a href="https://wa.me/905368499790" class="fab-btn fab-whatsapp" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://wa.me/905368499790" class="fab-btn fab-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="tel:+905368499790" class="fab-btn fab-phone"><i class="fas fa-phone-alt"></i></a>
   </div>
 
-  <!-- Elite Dark Footer -->
-  <footer style="background-color: var(--primary); padding-top: 100px; border-top: 1px solid rgba(255,255,255,0.05);">
+  <!-- Classic Footer -->
+  <footer>
     <div class="container">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 60px; margin-bottom: 60px;">
-        <div class="footer-about" style="grid-column: span 2;">
-          <a href="index.html" style="font-size: 24px; font-family: var(--font-heading); font-weight: 800; color: white; display: flex; align-items: center; gap: 10px; margin-bottom: 25px; text-decoration: none;">
-            <div style="width: 35px; height: 35px; background: var(--accent); color: var(--white); display: flex; align-items: center; justify-content: center; border-radius: 6px;"><i class="fas fa-leaf"></i></div>
-            HalıKoltuk<span style="font-weight: 300;">Yıkama</span>
-          </a>
-          <p style="color: rgba(255,255,255,0.6); font-size: 15px; max-width: 400px; line-height: 1.8;">Yılların tecrübesiyle halı, koltuk, yatak ve perdelerinizi ilk günkü temizliğine kavuşturuyoruz. Müşteri memnuniyeti bizim için her şeyden önce gelir.</p>
+      <div class="footer-grid">
+        <div class="footer-about">
+          <div class="logo"><i class="fas fa-leaf"></i> HalıKoltuk Yıkama</div>
+          <p>İstanbul'un lider temizlik firması olarak halı, koltuk, stor perde ve yatak yıkama hizmetlerinde kaliteyi evinize getiriyoruz.</p>
         </div>
-        
         <div>
-          <h4 style="font-family: var(--font-heading); font-size: 16px; font-weight: 700; color: white; margin-bottom: 30px;">Kurumsal</h4>
-          <ul style="display: flex; flex-direction: column; gap: 12px; list-style: none;">
-            <li><a href="hakkimizda.html" style="color: rgba(255,255,255,0.6); font-size: 15px; text-decoration: none;">Hakkımızda</a></li>
-            <li><a href="hizmetler.html" style="color: rgba(255,255,255,0.6); font-size: 15px; text-decoration: none;">Hizmetlerimiz</a></li>
-            <li><a href="blog.html" style="color: rgba(255,255,255,0.6); font-size: 15px; text-decoration: none;">Makaleler</a></li>
-            <li><a href="iletisim.html" style="color: rgba(255,255,255,0.6); font-size: 15px; text-decoration: none;">İletişim</a></li>
+          <h4 class="footer-title">Hızlı Menü</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="hizmetler.html">Hizmetlerimiz</a></li>
+            <li><a href="blog.html">Blog</a></li>
           </ul>
         </div>
-
         <div>
-          <h4 style="font-family: var(--font-heading); font-size: 16px; font-weight: 700; color: white; margin-bottom: 30px;">Hizmetler</h4>
-          <ul style="display: flex; flex-direction: column; gap: 12px; list-style: none;">
-            <li><a href="hizmetler.html" style="color: rgba(255,255,255,0.6); font-size: 15px; text-decoration: none;">Halı Yıkama</a></li>
-            <li><a href="hizmetler.html" style="color: rgba(255,255,255,0.6); font-size: 15px; text-decoration: none;">Koltuk Yıkama</a></li>
-            <li><a href="hizmetler.html" style="color: rgba(255,255,255,0.6); font-size: 15px; text-decoration: none;">Yatak Yıkama</a></li>
+          <h4 class="footer-title">Hizmetlerimiz</h4>
+          <ul class="footer-links">
+            <li><a href="hizmetler.html">Halı Yıkama</a></li>
+            <li><a href="hizmetler.html">Koltuk Yıkama</a></li>
+            <li><a href="hizmetler.html">Yatak Yıkama</a></li>
+            <li><a href="hizmetler.html">Perde Yıkama</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">İletişim</h4>
+          <ul class="footer-contact">
+            <li><i class="fas fa-map-marker-alt"></i> <span>İstanbul, Türkiye</span></li>
+            <li><i class="fas fa-phone-alt"></i> <span>+90 536 849 97 90</span></li>
+            <li><i class="fab fa-whatsapp"></i> <span>+90 536 849 97 90</span></li>
           </ul>
         </div>
       </div>
-      
-      <div style="text-align: center; padding: 30px 0; border-top: 1px solid rgba(255,255,255,0.05); color: rgba(255,255,255,0.4); font-size: 14px;">
-        <p>&copy; 2026 Halı Koltuk Yıkama. Tüm Hakları Saklıdır.</p>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Halı Koltuk Yıkama. Tüm hakları saklıdır.</p>
       </div>
     </div>
   </footer>
 
   <script>
+    // Page Loader
+    window.addEventListener('load', function() {
+      const loader = document.getElementById('loader');
+      setTimeout(() => {
+        loader.classList.add('fade-out');
+      }, 500);
+    });
+
+    // Sticky Header
     window.addEventListener('scroll', function() {
-      const header = document.querySelector('header');
+      const header = document.getElementById('main-header');
       if (window.scrollY > 50) {
-        header.classList.add('scrolled');
+        header.style.boxShadow = '0 4px 10px rgba(0,0,0,0.1)';
       } else {
-        header.classList.remove('scrolled');
+        header.style.boxShadow = '0 1px 3px rgba(0,0,0,0.1)';
       }
     });
   </script>

@@ -3,114 +3,157 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Halı Koltuk Yıkama blog yazıları: halı yıkama teknikleri, profesyonel temizlik önerileri ve sektör bilgileri.">
-  <meta name="robots" content="index, follow">
-  <title>Blog | Halı Koltuk Yıkama</title>
+  <title>Blog ve Makaleler | Halı Koltuk Yıkama</title>
+  <meta name="description" content="Ev temizliği, halı ve koltuk bakımı hakkında faydalı bilgiler, ipuçları ve güncel makaleler.">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <!-- Slim Modern Header -->
-  <header>
-    <div class="container">
-      <a href="index.html" class="logo">
-        <div class="logo-icon"><i class="fas fa-leaf"></i></div>
-        <span>HalıKoltuk <span style="font-weight:300">Yıkama</span></span>
-      </a>
-      
-      <nav class="nav-links">
-        <a href="index.html">Ana Sayfa</a>
-        <a href="hakkimizda.html">Kurumsal</a>
-        <a href="hizmetler.html">Hizmetler</a>
-        <a href="blog.html">Makaleler</a>
-        <a href="iletisim.html">İletişim</a>
-      </nav>
-      
-      <div class="header-cta">
-        <a href="tel:+905368499790" class="btn btn-primary">Hemen Ara</a>
+
+  <!-- Page Loader -->
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Classic Premium Header -->
+  <header id="main-header">
+    <div class="header-top">
+      <div class="container">
+        <div class="header-top-info">
+          <span><i class="fas fa-map-marker-alt"></i> İstanbul, Türkiye</span>
+          <span><i class="fas fa-envelope"></i> info@halikoltukyikama.com</span>
+        </div>
+        <div>
+          <span>Çalışma Saatleri: 08:00 - 20:00</span>
+        </div>
       </div>
-      
-      <button class="mobile-menu-btn" aria-label="Menu" style="display:none">
-        <i class="fas fa-bars"></i>
-      </button>
+    </div>
+    <div class="header-main">
+      <div class="container">
+        <a href="index.html" class="logo">
+          <i class="fas fa-leaf"></i> HalıKoltuk Yıkama
+        </a>
+        <nav class="nav-links">
+          <a href="index.html">Ana Sayfa</a>
+          <a href="hakkimizda.html">Kurumsal</a>
+          <a href="hizmetler.html">Hizmetlerimiz</a>
+          <a href="blog.html" style="color: var(--secondary);">Blog</a>
+          <a href="iletisim.html">İletişim</a>
+        </nav>
+        <a href="tel:+905368499790" class="header-btn">Hemen Ara</a>
+      </div>
     </div>
   </header>
 
-  <section class="page-header">
-    <div class="container fade-in">
-      <h1>Blog</h1>
-      <div class="breadcrumb"><a href="index.html">Ana Sayfa</a> / <span>Blog</span></div>
-    </div>
-  </section>
-
-  <section class="services" style="padding-top: 80px;">
-    <div class="container">
-      <div class="services-grid">
-        <a class="service-card fade-in" href="blog-11-sicak-su-ile-hali-yikama.html"><img src="assets/images/photo-1.jpg" class="service-thumb" alt="Blog görseli"><h3>Sıcak Su ile Halı Yıkama</h3><p>Yüksek sıcaklık kullanımında dikkat edilmesi gereken teknik detaylar.</p></a>
-        <a class="service-card fade-in" href="blog-10-profesyonel-hali-yikama.html"><img src="assets/images/photo-2.jpg" class="service-thumb" alt="Blog görseli"><h3>Profesyonel Halı Yıkama</h3><p>Kurumsal temizlik sürecinin avantajları ve kalite adımları.</p></a>
-        <a class="service-card fade-in" href="blog-9-hangi-hali-yikamaci.html"><img src="assets/images/photo-3.jpg" class="service-thumb" alt="Blog görseli"><h3>Hangi Halı Yıkamacı?</h3><p>Doğru firma seçerken göz önünde bulundurmanız gereken kriterler.</p></a>
-        <a class="service-card fade-in" href="blog-8-kuyu-suyu-ile-hali-yikama.html"><img src="assets/images/photo-4.jpg" class="service-thumb" alt="Blog görseli"><h3>Kuyu Suyu ile Halı Yıkama</h3><p>Kuyu suyu kullanımının halı dokusu üzerindeki etkileri.</p></a>
-        <a class="service-card fade-in" href="blog-7-fiyatlar-nasil-belirleniyor.html"><img src="assets/images/photo-5.jpg" class="service-thumb" alt="Blog görseli"><h3>Fiyatlar Nasıl Belirleniyor</h3><p>Halı yıkama fiyatlandırmasında belirleyici olan ana etkenler.</p></a>
-        <a class="service-card fade-in" href="blog-6-detayli-hali-temizligi.html"><img src="assets/images/photo-6.jpg" class="service-thumb" alt="Blog görseli"><h3>Detaylı Halı Temizliği</h3><p>Derinlemesine temizlikte izlenen aşamalar ve püf noktalar.</p></a>
-        <a class="service-card fade-in" href="blog-5-fason-hali-yikamacilar.html"><img src="assets/images/photo-7.jpg" class="service-thumb" alt="Blog görseli"><h3>Fason Halı Yıkamacılar</h3><p>Aracı firma riskleri ve güvenilir hizmet için dikkat edilmesi gerekenler.</p></a>
-        <a class="service-card fade-in" href="blog-4-hali-yikamada-havuz-sistemi.html"><img src="assets/images/photo-8.jpg" class="service-thumb" alt="Blog görseli"><h3>Halı Yıkamada Havuz Sistemi</h3><p>Havuz sisteminin hijyen ve performans açısından değerlendirmesi.</p></a>
-        <a class="service-card fade-in" href="blog-3-teknikler.html"><img src="assets/images/photo-9.jpg" class="service-thumb" alt="Blog görseli"><h3>Teknikler</h3><p>Farklı halı türleri için uygulanan profesyonel yıkama teknikleri.</p></a>
-        <a class="service-card fade-in" href="blog-2-yanlis-hali-yikama.html"><img src="assets/images/photo-10.jpg" class="service-thumb" alt="Blog görseli"><h3>Yanlış Halı Yıkama</h3><p>Sık yapılan hatalar ve halı ömrünü kısaltan yanlış uygulamalar.</p></a>
-        <a class="service-card fade-in" href="blog-1-leke-nedir.html"><img src="assets/images/photo-11.jpg" class="service-thumb" alt="Blog görseli"><h3>Leke Nedir?</h3><p>Leke türleri, müdahale yöntemleri ve kalıcı lekeleri önleme yolları.</p></a>
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <h1>Temizlik Rehberi</h1>
+        <p>Halı ve Koltuk Bakımı Hakkında Faydalı Bilgiler</p>
       </div>
     </div>
-  </section>
 
-  <!-- Elite Dark Footer -->
-  <footer style="background-color: var(--primary); padding-top: 100px; border-top: 1px solid rgba(255,255,255,0.05);">
-    <div class="container">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 60px; margin-bottom: 60px;">
-        <div class="footer-about" style="grid-column: span 2;">
-          <a href="index.html" style="font-size: 24px; font-family: var(--font-heading); font-weight: 800; color: white; display: flex; align-items: center; gap: 10px; margin-bottom: 25px; text-decoration: none;">
-            <div style="width: 35px; height: 35px; background: var(--accent); color: var(--white); display: flex; align-items: center; justify-content: center; border-radius: 6px;"><i class="fas fa-leaf"></i></div>
-            HalıKoltuk<span style="font-weight: 300;">Yıkama</span>
-          </a>
-          <p style="color: rgba(255,255,255,0.6); font-size: 15px; max-width: 400px; line-height: 1.8;">Yılların tecrübesiyle halı, koltuk, yatak ve perdelerinizi ilk günkü temizliğine kavuşturuyoruz. Müşteri memnuniyeti bizim için her şeyden önce gelir.</p>
+    <!-- Blog Section -->
+    <section class="blog">
+      <div class="container">
+        <div class="blog-grid" id="blog-container">
+          <!-- Populated by JS -->
+          <div class="blog-card">
+            <div class="blog-img"><img src="assets/images/photo-1.jpg" alt="Leke Çıkarma"></div>
+            <div class="blog-content">
+              <span class="blog-date">26 NİSAN 2026</span>
+              <h3>Halıdaki İnatçı Lekeler Nasıl Çıkarılır?</h3>
+              <p>Evde uygulayabileceğiniz pratik ve doğal leke çıkarma yöntemlerini sizin için derledik.</p>
+              <a href="#">Devamını Oku &rarr;</a>
+            </div>
+          </div>
+          <div class="blog-card">
+            <div class="blog-img"><img src="assets/images/photo-2.jpg" alt="Koltuk Bakımı"></div>
+            <div class="blog-content">
+              <span class="blog-date">24 NİSAN 2026</span>
+              <h3>Koltuklarınızın Ömrünü Uzatacak İpuçları</h3>
+              <p>Doğru temizlik ve bakım ile koltuklarınızı yıllarca ilk günkü gibi kullanabilirsiniz.</p>
+              <a href="#">Devamını Oku &rarr;</a>
+            </div>
+          </div>
+          <div class="blog-card">
+            <div class="blog-img"><img src="assets/images/photo-3.jpg" alt="Hijyen"></div>
+            <div class="blog-content">
+              <span class="blog-date">22 NİSAN 2026</span>
+              <h3>Evde Hijyen Sağlamanın 5 Altın Kuralı</h3>
+              <p>Sağlıklı bir yaşam alanı için dikkat etmeniz gereken en önemli hijyen kuralları.</p>
+              <a href="#">Devamını Oku &rarr;</a>
+            </div>
+          </div>
         </div>
-        
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating Contact Buttons -->
+  <div class="fab-container">
+    <a href="https://wa.me/905368499790" class="fab-btn fab-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="tel:+905368499790" class="fab-btn fab-phone"><i class="fas fa-phone-alt"></i></a>
+  </div>
+
+  <!-- Classic Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <div class="logo"><i class="fas fa-leaf"></i> HalıKoltuk Yıkama</div>
+          <p>İstanbul'un lider temizlik firması olarak halı, koltuk, stor perde ve yatak yıkama hizmetlerinde kaliteyi evinize getiriyoruz.</p>
+        </div>
         <div>
-          <h4 style="font-family: var(--font-heading); font-size: 16px; font-weight: 700; color: white; margin-bottom: 30px;">Kurumsal</h4>
-          <ul style="display: flex; flex-direction: column; gap: 12px; list-style: none;">
-            <li><a href="hakkimizda.html" style="color: rgba(255,255,255,0.6); font-size: 15px; text-decoration: none;">Hakkımızda</a></li>
-            <li><a href="hizmetler.html" style="color: rgba(255,255,255,0.6); font-size: 15px; text-decoration: none;">Hizmetlerimiz</a></li>
-            <li><a href="blog.html" style="color: rgba(255,255,255,0.6); font-size: 15px; text-decoration: none;">Makaleler</a></li>
-            <li><a href="iletisim.html" style="color: rgba(255,255,255,0.6); font-size: 15px; text-decoration: none;">İletişim</a></li>
+          <h4 class="footer-title">Hızlı Menü</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="hizmetler.html">Hizmetlerimiz</a></li>
+            <li><a href="blog.html">Blog</a></li>
           </ul>
         </div>
-
         <div>
-          <h4 style="font-family: var(--font-heading); font-size: 16px; font-weight: 700; color: white; margin-bottom: 30px;">Hizmetler</h4>
-          <ul style="display: flex; flex-direction: column; gap: 12px; list-style: none;">
-            <li><a href="hizmetler.html" style="color: rgba(255,255,255,0.6); font-size: 15px; text-decoration: none;">Halı Yıkama</a></li>
-            <li><a href="hizmetler.html" style="color: rgba(255,255,255,0.6); font-size: 15px; text-decoration: none;">Koltuk Yıkama</a></li>
-            <li><a href="hizmetler.html" style="color: rgba(255,255,255,0.6); font-size: 15px; text-decoration: none;">Yatak Yıkama</a></li>
+          <h4 class="footer-title">Hizmetlerimiz</h4>
+          <ul class="footer-links">
+            <li><a href="hizmetler.html">Halı Yıkama</a></li>
+            <li><a href="hizmetler.html">Koltuk Yıkama</a></li>
+            <li><a href="hizmetler.html">Yatak Yıkama</a></li>
+            <li><a href="hizmetler.html">Perde Yıkama</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">İletişim</h4>
+          <ul class="footer-contact">
+            <li><i class="fas fa-map-marker-alt"></i> <span>İstanbul, Türkiye</span></li>
+            <li><i class="fas fa-phone-alt"></i> <span>+90 536 849 97 90</span></li>
+            <li><i class="fab fa-whatsapp"></i> <span>+90 536 849 97 90</span></li>
           </ul>
         </div>
       </div>
-      
-      <div style="text-align: center; padding: 30px 0; border-top: 1px solid rgba(255,255,255,0.05); color: rgba(255,255,255,0.4); font-size: 14px;">
-        <p>&copy; 2026 Halı Koltuk Yıkama. Tüm Hakları Saklıdır.</p>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Halı Koltuk Yıkama. Tüm hakları saklıdır.</p>
       </div>
     </div>
   </footer>
 
-    <!-- Floating Phone Button -->
-  
-  
-  <script src="js/script.js"></script>
   <script src="js/blog-fetcher.js"></script>
-<script>
+  <script>
+    // Page Loader
+    window.addEventListener('load', function() {
+      const loader = document.getElementById('loader');
+      setTimeout(() => {
+        loader.classList.add('fade-out');
+      }, 500);
+    });
+
+    // Sticky Header
     window.addEventListener('scroll', function() {
-      const header = document.querySelector('header');
+      const header = document.getElementById('main-header');
       if (window.scrollY > 50) {
-        header.classList.add('scrolled');
+        header.style.boxShadow = '0 4px 10px rgba(0,0,0,0.1)';
       } else {
-        header.classList.remove('scrolled');
+        header.style.boxShadow = '0 1px 3px rgba(0,0,0,0.1)';
       }
     });
   </script>
